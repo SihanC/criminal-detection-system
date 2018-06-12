@@ -1,0 +1,10 @@
+#!/bin/bash
+
+prefix="citizen1_"
+
+for i in {1..4}
+do
+    python3 camera_flask.py $i $prefix$i &
+done  
+
+python3 camera_flask.py 5 "criminals" &
